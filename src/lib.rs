@@ -281,7 +281,7 @@ impl<'a, W: Write> Fz<'a, W> {
             .matches
             .iter()
             .skip(self.offset) // start iterating matches from offset
-            .take(max_rows as usize) // only print matches that fit on screen
+            .take(max_rows as usize + 1) // only print matches that fit on screen
             .enumerate()
         {
             // draw the match
